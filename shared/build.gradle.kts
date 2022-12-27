@@ -76,9 +76,16 @@ kotlin {
 
 android {
     namespace = "com.mind.market.translator_kmm"
-    compileSdk = 32
+    compileSdk = 33
     defaultConfig {
         minSdk = 26
-        targetSdk = 32
+        targetSdk = 33
+    }
+}
+
+sqldelight {
+    database("TranslateDatabase") {
+        packageName = "com.mind.market.translator_kmm.database"
+        sourceFolders = listOf("sqldelight")
     }
 }
