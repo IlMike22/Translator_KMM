@@ -5,4 +5,7 @@
     <string name="swap_languages">Swap Languages</string>
     <string name="enter_a_text_to_translate">Enter a text to translate</string>
     <string name="translate">Translate</string>
+    <string name="copy">copy</string>
+    <string name="speak">speak</string>
+    <string name="copied_to_clipboard">Text copied to clipboard</string>
 </resources>
