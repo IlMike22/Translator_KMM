@@ -45,7 +45,6 @@ fun LanguageDropDown(
         }
         Row(
             modifier = Modifier
-                .fillMaxWidth()
                 .clickable(onClick = onClick)
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -62,8 +61,7 @@ fun LanguageDropDown(
             )
             Icon(
                 imageVector = if (isOpen) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
-                contentDescription = if (isOpen) stringResource(R.string.close)
-                else stringResource(R.string.open),
+                contentDescription = if (isOpen) stringResource(R.string.close) else stringResource(R.string.open),
                 tint = LightBlue,
                 modifier = Modifier.size(30.dp)
             )
