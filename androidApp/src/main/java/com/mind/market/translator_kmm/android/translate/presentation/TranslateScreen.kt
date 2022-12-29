@@ -61,7 +61,9 @@ fun TranslateScreen(
                     Spacer(Modifier.weight(1f))
 
                     SwapLanguagesButton(
-                        onClick = { onEvent(TranslateEvent.SwapLanguages) }
+                        onClick = {
+                            onEvent(TranslateEvent.SwapLanguages)
+                        }
                     )
 
                     Spacer(Modifier.weight(1f))

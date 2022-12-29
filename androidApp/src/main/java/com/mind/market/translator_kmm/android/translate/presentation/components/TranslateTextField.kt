@@ -181,14 +181,14 @@ private fun IdleTranslateTextField(
         if (fromText.isEmpty() && isFocused.not()) {
             Text(
                 text = stringResource(
-                    id = com.mind.market.translator_kmm.android.R.string.enter_a_text_to_translate,
+                    id = R.string.enter_a_text_to_translate,
                 ),
                 color = LightBlue
             )
         }
         ProgressButton(
             text = stringResource(
-                id = com.mind.market.translator_kmm.android.R.string.translate
+                id = R.string.translate
             ),
             isLoading = isTranslating,
             onClick = onTranslateClick,
