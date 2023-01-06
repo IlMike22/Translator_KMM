@@ -56,7 +56,7 @@ fun TranslateTextField(
         AnimatedContent(
             targetState = toText
         ) { toText ->
-            if (toText == null || isTranslating.not()) {
+            if (toText == null || isTranslating) {
                 IdleTranslateTextField(
                     fromText = fromText,
                     isTranslating = isTranslating,

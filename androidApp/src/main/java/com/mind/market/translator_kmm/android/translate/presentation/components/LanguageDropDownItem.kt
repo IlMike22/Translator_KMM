@@ -29,11 +29,8 @@ fun LanguageDropDownItem(
             contentDescription = language.language.langName,
             modifier = Modifier.size(40.dp)
         )
-        Spacer(modifier.width(16.dp))
-        Text(
-            text = language.language.langName
-        )
-
+        Spacer(Modifier.width(16.dp))
+        Text(text = language.language.langName)
     }
 
 }
