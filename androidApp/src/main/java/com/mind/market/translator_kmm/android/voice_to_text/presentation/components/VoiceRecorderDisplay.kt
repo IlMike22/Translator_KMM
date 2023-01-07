@@ -19,8 +19,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mind.market.translator_kmm.android.TranslatorTheme
 import com.mind.market.translator_kmm.android.translate.presentation.components.gradientSurface
-import kotlin.math.PI
-import kotlin.math.sin
 import kotlin.random.Random
 
 @Composable
@@ -79,7 +77,7 @@ fun VoiceRecorderDisplayPreview() {
     TranslatorTheme() {
         VoiceRecorderDisplay(
             powerRatios = (0..100).map {
-               Random.nextFloat()
+                Random.nextFloat()
             },
             modifier = Modifier
                 .fillMaxWidth()
