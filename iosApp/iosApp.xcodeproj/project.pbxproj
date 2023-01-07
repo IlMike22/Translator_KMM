@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
+		1F6D956C2968100B00391074 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D956B2968100B00391074 /* Colors.swift */; };
+		1F6D95722969585C00391074 /* LanguageDropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D95712969585C00391074 /* LanguageDropDownItem.swift */; };
+		1F6D957429695D8800391074 /* LanguageDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D957329695D8800391074 /* LanguageDropDown.swift */; };
+		1F6D95762969609300391074 /* SmallLanguageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D95752969609300391074 /* SmallLanguageIcon.swift */; };
+		1F6D95782969627000391074 /* SwapLanguageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D95772969627000391074 /* SwapLanguageButton.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7522D68034461E9FD7A7FA2E /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523A933AE1D8BAC296D51722 /* Pods_iosApp.framework */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
@@ -17,6 +22,11 @@
 /* Begin PBXFileReference section */
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1F6D956B2968100B00391074 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1F6D95712969585C00391074 /* LanguageDropDownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDropDownItem.swift; sourceTree = "<group>"; };
+		1F6D957329695D8800391074 /* LanguageDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDropDown.swift; sourceTree = "<group>"; };
+		1F6D95752969609300391074 /* SmallLanguageIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallLanguageIcon.swift; sourceTree = "<group>"; };
+		1F6D95772969627000391074 /* SwapLanguageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapLanguageButton.swift; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		523A933AE1D8BAC296D51722 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,13 +56,55 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1F6D956929680FA600391074 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D956A29680FBD00391074 /* presentation */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		1F6D956A29680FBD00391074 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D956B2968100B00391074 /* Colors.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		1F6D956E2969580900391074 /* translate */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D956F2969582700391074 /* presentation */,
+			);
+			path = translate;
+			sourceTree = "<group>";
+		};
+		1F6D956F2969582700391074 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D95702969582C00391074 /* components */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		1F6D95702969582C00391074 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D95712969585C00391074 /* LanguageDropDownItem.swift */,
+				1F6D957329695D8800391074 /* LanguageDropDown.swift */,
+				1F6D95752969609300391074 /* SmallLanguageIcon.swift */,
+				1F6D95772969627000391074 /* SwapLanguageButton.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		63C4376D7257BACE57970B55 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9D79D95A4891D72E15A330D7 /* Pods-iosApp.debug.xcconfig */,
 				828D22368F0C075279B20CD3 /* Pods-iosApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +137,8 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F6D956E2969580900391074 /* translate */,
+				1F6D956929680FA600391074 /* core */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -102,6 +156,7 @@
 			buildConfigurationList = 7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
 				E761293A89607610CD99F874 /* [CP] Check Pods Manifest.lock */,
+				1F64FC2F2968083400D18C53 /* Run Script */,
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				CEFBAF6B9472A9069EF8553F /* Frameworks */,
@@ -161,6 +216,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F64FC2F2968083400D18C53 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
+		};
 		E761293A89607610CD99F874 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,6 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				1F6D95722969585C00391074 /* LanguageDropDownItem.swift in Sources */,
+				1F6D95762969609300391074 /* SmallLanguageIcon.swift in Sources */,
+				1F6D957429695D8800391074 /* LanguageDropDown.swift in Sources */,
+				1F6D95782969627000391074 /* SwapLanguageButton.swift in Sources */,
+				1F6D956C2968100B00391074 /* Colors.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,10 +400,27 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/../../shared/build/cocoapods/framework\"",
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
 				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-framework",
+					"\"shared\"",
+					"-lsqlite3",
+					"$(inherited)",
+					"-framework",
+					shared,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -342,10 +437,27 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/../../shared/build/cocoapods/framework\"",
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
 				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-framework",
+					"\"shared\"",
+					"-lsqlite3",
+					"$(inherited)",
+					"-framework",
+					shared,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

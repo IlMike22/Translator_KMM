@@ -3,7 +3,7 @@ plugins {
     kotlin("native.cocoapods")
     id("com.android.library")
     kotlin("plugin.serialization") version Deps.kotlinVersion
-    id("com.squareup.sqldelight")
+//    id("com.squareup.sqldelight")
 }
 
 kotlin {
@@ -19,6 +19,7 @@ kotlin {
         ios.deploymentTarget = "14.1"
         podfile = project.file("../iosApp/Podfile")
         framework {
+            isStatic = false
             baseName = "shared"
         }
     }
@@ -83,9 +84,9 @@ android {
     }
 }
 
-sqldelight {
-    database("TranslateDatabase") {
-        packageName = "com.mind.market.translator_kmm.database"
-        sourceFolders = listOf("sqldelight")
-    }
-}
+//sqldelight {
+//    database("TranslateDatabase") {
+//        packageName = "com.mind.market.translator_kmm.database"
+//        sourceFolders = listOf("sqldelight")
+//    }
+//}

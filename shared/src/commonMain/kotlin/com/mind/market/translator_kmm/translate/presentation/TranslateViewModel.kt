@@ -3,7 +3,7 @@ package com.mind.market.translator_kmm.translate.presentation
 import com.mind.market.translator_kmm.core.domain.util.Resource
 import com.mind.market.translator_kmm.core.domain.util.toCommonStateFlow
 import com.mind.market.translator_kmm.core.presentation.UiLanguage
-import com.mind.market.translator_kmm.translate.domain.history.IHistoryDataSource
+//import com.mind.market.translator_kmm.translate.domain.history.IHistoryDataSource
 import com.mind.market.translator_kmm.translate.domain.translate.Translate
 import com.mind.market.translator_kmm.translate.domain.translate.TranslateException
 import kotlinx.coroutines.CoroutineScope
@@ -14,29 +14,35 @@ import kotlinx.coroutines.launch
 
 class TranslateViewModel(
     private val translateUseCase: Translate,
-    private val historyDataSource: IHistoryDataSource,
+//    private val historyDataSource: IHistoryDataSource,
     private val coroutineScope: CoroutineScope?
 ) {
     private val viewModelScope = coroutineScope ?: CoroutineScope(Dispatchers.Main)
     private val _state = MutableStateFlow(TranslateState())
-    val state = combine(
-        _state,
-        historyDataSource.getHistory()
-    ) { state, history ->
-        if (state.history != history) {
-            state.copy(
-                history = history.mapNotNull { historyItem ->
-                    UiHistoryItem(
-                        id = historyItem.id ?: return@mapNotNull null,
-                        fromText = historyItem.fromText,
-                        toText = historyItem.toText,
-                        fromLanguage = UiLanguage.byCode(historyItem.fromLanguageCode),
-                        toLanguage = UiLanguage.byCode(historyItem.toLanguageCode)
-                    )
-                }
-            )
-        } else state
-    }.stateIn(
+//    val state = combine(
+//        _state,
+//        historyDataSource.getHistory() // TODO 06.12.use that out commented code after sql delight works..
+//    ) { state, history ->
+//        if (state.history != history) {
+//            state.copy(
+//                history = history.mapNotNull { historyItem ->
+//                    UiHistoryItem(
+//                        id = historyItem.id ?: return@mapNotNull null,
+//                        fromText = historyItem.fromText,
+//                        toText = historyItem.toText,
+//                        fromLanguage = UiLanguage.byCode(historyItem.fromLanguageCode),
+//                        toLanguage = UiLanguage.byCode(historyItem.toLanguageCode)
+//                    )
+//                }
+//            )
+//        } else state
+//    }.stateIn(
+//        viewModelScope,
+//        SharingStarted.WhileSubscribed(5000),
+//        TranslateState()
+//    ).toCommonStateFlow()
+
+        val state = _state.stateIn( // TODO 06.12. remove that code block after sql delight works
         viewModelScope,
         SharingStarted.WhileSubscribed(5000),
         TranslateState()

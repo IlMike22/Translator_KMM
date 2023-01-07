@@ -169,23 +169,23 @@ fun TranslateScreen(
                 )
             }
 
-            item {
-                if (state.history.isNotEmpty()) {
-                    Text(
-                        text = stringResource(id = R.string.history),
-                        style = MaterialTheme.typography.h2
-                    )
-                }
-            }
-            items(state.history) { historyItem ->
-                TranslateHistoryItem(
-                    item = historyItem,
-                    onClick = {
-                        onEvent(TranslateEvent.SelectHistoryItem(historyItem))
-                    },
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
+//            item {
+//                if (state.history.isNotEmpty()) {
+//                    Text(
+//                        text = stringResource(id = R.string.history),
+//                        style = MaterialTheme.typography.h2
+//                    )
+//                }
+//            }
+//            items(state.history) { historyItem -> // TODO 06.12. insert code block again after sql delight works
+//                TranslateHistoryItem(
+//                    item = historyItem,
+//                    onClick = {
+//                        onEvent(TranslateEvent.SelectHistoryItem(historyItem))
+//                    },
+//                    modifier = Modifier.fillMaxWidth()
+//                )
+//            }
         }
     }
 }
