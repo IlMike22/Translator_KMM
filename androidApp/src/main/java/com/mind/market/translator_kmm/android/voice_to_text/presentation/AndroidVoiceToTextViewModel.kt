@@ -11,7 +11,7 @@ import javax.inject.Inject
 @HiltViewModel
 class AndroidVoiceToTextViewModel @Inject constructor(
     private val parser: IVoiceToTextParser
-): ViewModel() {
+) : ViewModel() {
     private val viewModel by lazy {
         VoiceToTextViewModel(
             parser = parser,
@@ -21,7 +21,7 @@ class AndroidVoiceToTextViewModel @Inject constructor(
 
     val state = viewModel.state
 
-    fun onEvent(event:VoiceToTextEvent) {
+    fun onEvent(event: VoiceToTextEvent) {
         viewModel.onEvent(event)
     }
 }

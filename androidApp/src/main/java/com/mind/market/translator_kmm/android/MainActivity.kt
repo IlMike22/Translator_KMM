@@ -6,10 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Shapes
-import androidx.compose.material.Surface
-import androidx.compose.material.Typography
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -34,6 +31,7 @@ import com.mind.market.translator_kmm.android.voice_to_text.presentation.Android
 import com.mind.market.translator_kmm.android.voice_to_text.presentation.VoiceToTextScreen
 import com.mind.market.translator_kmm.translate.presentation.TranslateEvent
 import com.mind.market.translator_kmm.voice_to_text.presentation.VoiceToTextEvent
+import com.mind.market.translator_kmm.voice_to_text.presentation.VoiceToTextState
 import dagger.hilt.android.AndroidEntryPoint
 
 @Composable
@@ -129,6 +127,7 @@ fun TranslateRoute() {
         composable(Routes.TRANSLATE) { backStackEntry ->
             val viewModel = hiltViewModel<AndroidTranslateViewModel>()
             val state by viewModel.state.collectAsState()
+
             val voiceResult by backStackEntry
                 .savedStateHandle
                 .getStateFlow<String?>("voiceResult", null)
@@ -170,6 +169,7 @@ fun TranslateRoute() {
                         key = "voiceResult",
                         value = translatedText
                     )
+
                     navController.popBackStack()
                 },
                 onEvent = { event ->

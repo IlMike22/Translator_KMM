@@ -18,11 +18,11 @@ import kotlinx.coroutines.flow.update
 class AndroidVoiceToTextParser(
     private val app: Application
 ) : IVoiceToTextParser, RecognitionListener {
-    private val _state = MutableStateFlow(VoiceToTextParserState())
     private val recognizer = SpeechRecognizer.createSpeechRecognizer(app)
 
-    override val state: CommonStateFlow<VoiceToTextParserState>
-        get() = _state.toCommonStateFlow()
+    private val _state = MutableStateFlow(VoiceToTextParserState())
+    override val state: CommonStateFlow<VoiceToTextParserState> =
+        _state.toCommonStateFlow()
 
     override fun startListening(languageCode: String) {
         _state.update { VoiceToTextParserState() }

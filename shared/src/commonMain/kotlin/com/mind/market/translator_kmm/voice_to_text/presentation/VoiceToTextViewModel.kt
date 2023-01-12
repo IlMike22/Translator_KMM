@@ -10,9 +10,10 @@ import kotlinx.coroutines.launch
 
 class VoiceToTextViewModel(
     private val parser: IVoiceToTextParser,
-    private val scope: CoroutineScope? = null
+    scope: CoroutineScope? = null
 ) {
     private val viewModelScope = scope ?: CoroutineScope(Dispatchers.Main)
+
     private val _state = MutableStateFlow(VoiceToTextState())
     val state = _state.combine(parser.state) { state, voiceResult ->
         state.copy(
@@ -41,8 +42,9 @@ class VoiceToTextViewModel(
                             powerRatios = it.powerRatios + parser.state.value.powerRatio
                         )
                     }
-                    delay(50L)
                 }
+
+                delay(50L)
             }
         }
     }
@@ -54,7 +56,7 @@ class VoiceToTextViewModel(
             }
             VoiceToTextEvent.Reset -> {
                 parser.reset()
-                _state.value = VoiceToTextState()
+                _state.update { VoiceToTextState() }
             }
             is VoiceToTextEvent.ToggleRecording -> toggleRecording(event.languageCode)
             else -> Unit
